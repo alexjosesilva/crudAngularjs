@@ -71,14 +71,18 @@
     <script type="text/javascript">
         var myapp = angular.module('myapp',[]);
 
-        myapp.controller('productController',function($scope) {
-            $scope.listProducts = [
+        myapp.controller('productController',function($scope,$http) {
+          /*  $scope.listProducts = [
                 {id:'p01', name:'Product 1', price:1000, quantity:20},
                 {id:'p02', name:'Product 2', price:2000, quantity:21},
                 {id:'p03', name:'Product 3', price:3000, quantity:22},
                 {id:'p04', name:'Product 4', price:4000, quantity:23}
             ];
-
+		 */
+		 
+		 $http.get("customers_mysql.php").then(function (response) {$scope.listProducts = response.data.records;});
+		 
+		 
             $scope.add = function(id){
 
                 $scope.listProducts.push({
