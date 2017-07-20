@@ -80,18 +80,29 @@
             ];
 		 */
 		 
-		 $http.get("customers_mysql.php").then(function (response) {$scope.listProducts = response.data.records;});
+		  $http.get("customers_mysql.php").then(function (response) {$scope.listProducts = response.data.records;});
 		 
 		 
-            $scope.add = function(id){
+            $scope.add = function(){
 
-                $scope.listProducts.push({
+                /*$scope.listProducts.push({
                     id:$scope.id,
                     name:$scope.name,
                     price:$scope.price,
                     quantity:$scope.quantity
-                });
-
+                });*/
+				
+				/*$http.post("insert.php", {
+				
+					'name':$scope.name,
+					'price':$scope.price,
+					'quantity':$scope.quantity})]
+					
+					.success(function(data,status,headers,config){
+						console.log("Data Inserted Successfully");
+					});
+				*/
+				
                 $scope.id       = '';
                 $scope.name     = '';
                 $scope.price    = '';
