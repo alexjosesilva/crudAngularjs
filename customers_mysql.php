@@ -1,10 +1,10 @@
  <?php
 	$HOST  = "localhost";
-	$LOGIN = "root";
-	$SENHA = "";
+	$LOGIN = "azure";
+	$SENHA = "6#vWHD_$";
  
 	mysql_connect( $HOST, $LOGIN, $SENHA) or die("Não foi possível a conexão com o servidor");
-	mysql_select_db("bancoteste") or die("Não foi possível selecionar o banco de dados");
+	mysql_select_db("localdb") or die("Não foi possível selecionar o banco de dados");
 	
 	$sql = "SELECT * FROM tprodutos";
 	$result = mysql_query($sql);
