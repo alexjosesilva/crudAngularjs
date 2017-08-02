@@ -1,5 +1,5 @@
  <?php
-	$HOST  = "http://127.0.0.1:54447/localdb";
+	$HOST  = "http://127.0.0.1:55609/localdb";
 	$LOGIN = "azure";
 	$SENHA = "6#vWHD_$";
  
