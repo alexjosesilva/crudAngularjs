@@ -1,5 +1,5 @@
  <?php
-	$HOST  = "https://127.0.0.1:55609/";
+	$HOST  = "//127.0.0.1:55609/";
 	$LOGIN = "azure";
 	$SENHA = "6#vWHD_$";
  
