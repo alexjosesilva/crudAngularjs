@@ -102,7 +102,10 @@
 						console.log("Data Inserted Successfully");
 					});
 				*/
-				$http.post("insert.php", seuObjeto).then(function() {
+				$http.post("insert.php", {				
+					'name':$scope.name,
+					'price':$scope.price,
+					'quantity':$scope.quantity}).then(function() {
 					console.log("Data Inserted Successfully");
 				});
 				
