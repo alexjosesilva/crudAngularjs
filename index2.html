@@ -101,7 +101,9 @@
                 $scope.quantity = '';
 				
 				//listar
-                $scope.listProducts = response.data.records;
+               $http.get("customers_mysql.php").then(function (response) {
+					$scope.listProducts = response.data.records;
+				});
             };
 
           
