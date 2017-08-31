@@ -19,6 +19,5 @@
 	$sql = "UPDATE `tprodutos` SET `name`=".$name.",`price`=".$price.",`quantity` = ".$quantity." WHERE `tprodutos`.`id` = ".$id.";";
 	$result = mysql_query($sql);
 	
-	
 	mysql_close();
 ?>

@@ -115,8 +115,7 @@
                 $scope.listProducts[index].price     = $scope.price;
                 $scope.listProducts[index].quantity  = $scope.quantity;
 
-				/*atulizar dados no banco*/
-				/*inserir dados no banco*/
+				/*atulizar dados no banco*/				
 				$http.post("update.php", {
 				    id:$scope.id,
 					name:$scope.name,
@@ -137,7 +136,8 @@
                 $scope.price    = '';
                 $scope.quantity = '';
             };
-        
+			
+			//carregar os dados nos inputs após clicar no butao editar
             $scope.selectEdit = function(id){
                 var index   = getSelectionIndex(id);
                 var product = $scope.listProducts[index];
@@ -155,8 +155,7 @@
                     var index = getSelectionIndex(id);
                     $scope.listProducts.splice(index,1);
 					
-					/* apagar dados no banco*/
-					/*inserir dados no banco*/
+				/* apagar dados no banco*/
 				$http.post("del.php", {
 				    id:$scope.id,
 					name:$scope.name,
@@ -164,7 +163,6 @@
 					quantity:$scope.quantity})					
 					.then(function(data,status,headers,config){
 						console.log("Data Inserted Successfully");
-						
 				});
 				
 				//carregar os dados

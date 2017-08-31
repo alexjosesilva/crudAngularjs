@@ -8,9 +8,11 @@
 	mysql_connect($HOST, $LOGIN, $SENHA) or die("Não foi possível a conexão com o servidor");
 	mysql_select_db($db) or die("Não foi possível SELECIONAR o banco de dados");
 	
+	$data		= json_decode(file_get_contents("php://input"));
+	$id			= mysql_real_escape_string($data->id);
 	
 	//deletar	
-	$sql = "";
+	$sql = "DELETE FROM `tprodutos` WHERE `tprodutos`.`id` =".$id;
 	$result = mysql_query($sql);
 	
 	
