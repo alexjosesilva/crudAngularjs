@@ -15,7 +15,11 @@
 	$price 		= $data->price;
 	$quantity 	= $data->quantity;
 	
-
+	$erro = 'arquivo.txt';
+	$file = fopen($erro, 'a');
+	fwrite($file, $data->name);
+	fclose($file);
+	 
 	//insert	
 	$sql = "INSERT INTO tprodutos('id','name', 'price', 'quantity') VALUES('".$id."','".$name."','".$price."','".$quantity."')";
 	$result = mysql_query($sql);
