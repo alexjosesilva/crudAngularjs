@@ -13,7 +13,7 @@
 	$price 		= mysql_real_escape_string($data->price);
 	$quantity 	= mysql_real_escape_string($data->quantity);
 	
-	$teste = "";
+	$teste = "343";
 	echo $teste;
 	var_dump($name);
 		
