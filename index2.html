@@ -88,20 +88,13 @@
                 });
 				
 				$http.post("insert.php", {	
-					'name':$scope.name,
-					'price':$scope.price,
-					'quantity':$scope.quantity})					
+					name:$scope.name,
+					price:$scope.price,
+					quantity:$scope.quantity})					
 					.then(function(data,status,headers,config){
 						console.log("Data Inserted Successfully");
 					});
 			
-  			/*$http.post("insert.php", {				
-					'name':$scope.name,
-					'price':$scope.price,
-					'quantity':$scope.quantity}).then(function() {
-					console.log("Data Inserted Successfully");
-				});
-				*/
 				
                 $scope.id       = '';
                 $scope.name     = '';
