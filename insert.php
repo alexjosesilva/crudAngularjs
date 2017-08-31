@@ -8,7 +8,8 @@
 	mysql_connect($HOST, $LOGIN, $SENHA) or die("Não foi possível a conexão com o servidor");
 	mysql_select_db($db) or die("Não foi possível SELECIONAR o banco de dados");
 	
-	$data		= json_decode(file_get_contents("php://input"));
+	$postdata	= json_decode(file_get_contents("php://input"));
+	$data 		= json_decode($postdata);
 	$id 		= mysql_real_escape_string($data->id);
 	$name 		= mysql_real_escape_string($data->name);
 	$price 		= mysql_real_escape_string($data->price);

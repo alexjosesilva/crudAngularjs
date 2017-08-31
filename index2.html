@@ -84,14 +84,28 @@
                 });
 				
 				/*inserir dados no banco*/
-				$http.post("insert.php", {
+				/*$http.post("insert.php", {
 				    'id':$scope.id,
 					'name':$scope.name,
 					'price':$scope.price,
 					'quantity':$scope.quantity})					
 					.then(function(data,status,headers,config){
 						console.log("Data Inserted Successfully");
+				});*/
+				
+				$http({
+					method: "post",
+					url: "insert.php",
+					data: {
+						 id:$scope.id,
+						 name:$scope.name,
+						 price:$scope.price,
+					     quantity:$scope.quantity
+					},
+					headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
 				});
+				
+				
 			
 				//limpar os inputs
                 $scope.id       = '';
