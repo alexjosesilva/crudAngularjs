@@ -162,10 +162,7 @@
 						console.log("Data Inserted Successfully");
 				});
 				
-				//carregar os dados
-				$http.get("customers_mysql.php").then(function (response) {
-					$scope.listProducts = response.data.records;
-				});
+				
                 }  
             };
 
