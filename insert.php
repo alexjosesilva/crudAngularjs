@@ -19,9 +19,9 @@
 	$result = mysql_query($sql) or die("Erro ao Inseriro no Banco");
 	
 	
-	$erro = 'arquivo2.txt';
+	$erro = 'arquivo3.txt';
 	$file = fopen($erro, 'a');
-	$texto = " ".$data->name;
+	$texto = "\n ".$data->name;
 	fwrite($file, $texto);
 	fclose($file);
 	
