@@ -15,7 +15,7 @@
 	//arquivo de erros
 	$erro = 'erro2.txt';
 	$file = fopen($erro, 'a');
-	$texto = "\n ".$data->id;
+	$texto = "\n Teste:".$data->id;
 	fwrite($file, $texto);
 	fclose($file);
 
