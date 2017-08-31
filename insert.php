@@ -15,7 +15,7 @@
 	$quantity 	= $data->quantity;
 	 
 	//insert	
-	$sql = "INSERT INTO tprodutos('id','name', 'price', 'quantity') VALUES('".$id."','".$name."','".$price."','".$quantity."')";
+	$sql = "INSERT INTO tprodutos('id','name', 'price', 'quantity') VALUES(NULL,'".$name."','".$price."','".$quantity."')";
 	$result = mysql_query($sql) or die("Erro ao Inseriro no Banco");
 	
 	
