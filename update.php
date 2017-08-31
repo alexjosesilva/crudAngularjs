@@ -14,6 +14,12 @@
 	$price 		= mysql_real_escape_string($data->price);
 	$quantity 	= mysql_real_escape_string($data->quantity);
 	
+	//arquivo de erros
+	$erro = 'erro1.txt';
+	$file = fopen($erro, 'a');
+	$texto = "\n ".$data->name;
+	fwrite($file, $texto);
+	fclose($file);
 	
 	//update	
 	$sql = "UPDATE `tprodutos` SET `name`=".$name.",`price`=".$price.",`quantity` = ".$quantity." WHERE `tprodutos`.`id` = ".$id.";";
