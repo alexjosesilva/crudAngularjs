@@ -2,9 +2,10 @@
 	$HOST  = "127.0.0.1:55609";
 	$LOGIN = "azure";
 	$SENHA = "6#vWHD_$";
+	$db = "localdb";
  
 	mysqli_connect($HOST, $LOGIN, $SENHA) or die("Não foi possível a conexão com o servidor");
-	mysqli_select_db("localdb") or die("Não foi possível selecionar o banco de dados");
+	mysqli_select_db($db) or die("Não foi possível selecionar o banco de dados");
 	
 	$sql = "SELECT * FROM tprodutos";
 	$result = mysqli_query($sql);
