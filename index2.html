@@ -91,9 +91,17 @@
 					quantity:$scope.quantity})					
 					.then(function(data,status,headers,config){
 						console.log("Data Inserted Successfully");
-						//listar
 						$scope.listProducts = response.data.records;
 				});
+				
+				//listar
+                $scope.listProducts.push({
+                    id:$scope.id,
+                    name:$scope.name,
+                    price:$scope.price,
+                    quantity:$scope.quantity
+                });
+				
 				
 				
 				//limpar os inputs
@@ -101,7 +109,8 @@
                 $scope.name     = '';
                 $scope.price    = '';
                 $scope.quantity = '';
-               
+				
+				
             };
 
           
