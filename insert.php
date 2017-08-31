@@ -9,13 +9,11 @@
 	mysql_select_db($db) or die("Não foi possível SELECIONAR o banco de dados");
 	
 	$data		= json_decode(file_get_contents("php://input"));
-	$id 		= $data->id;
-	$name 		= $data->name;
-	$price 		= $data->price;
-	$quantity 	= $data->quantity;
+	$name       = mysql_real_escape_string($data->name);
+    $price      = mysql_real_escape_string($data->price);
+    $quantity   = mysql_real_escape_string($data->quantity);
 	 
 	//insert	
-	$sql1 = "INSERT INTO tprodutos('id','name','price','quantity') VALUES(NULL,'".$name."','".$price."','".$quantity."')";
 	$sql = "INSERT INTO `tprodutos` (`id`, `name`, `price`, `quantity`) VALUES (NULL, '".$name."', '".$price."', '".$quantity."');";
 	
 	$result = mysql_query($sql) or die("Erro ao Inseriro no Banco");
