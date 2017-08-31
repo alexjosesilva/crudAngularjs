@@ -9,11 +9,14 @@
 	
 	$sql = "SELECT * FROM tprodutos";
 	$result = mysqli_query($sql);
+	
+	var_dump($result);
+	
 	$outp = "";
  
 	/* Escreve resultados até que não haja mais linhas na tabela */
 	while($rs = mysqli_fetch_array($result)) {
-		//print "$consulta[nome] - $consulta[local]<br>";
+		print "$consulta[nome] - $consulta[local]<br>";
 		
 		if ($outp != "") {$outp .= ",";}
 		
