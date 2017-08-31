@@ -87,7 +87,8 @@
                     quantity:$scope.quantity
                 });
 				
-				$http.post("insert.php", {	
+				$http.post("insert.php", {
+					id:'',
 					name:$scope.name,
 					price:$scope.price,
 					quantity:$scope.quantity})					
