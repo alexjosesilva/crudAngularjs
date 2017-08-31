@@ -17,13 +17,13 @@
 	
 	$erro = 'arquivo.txt';
 	$file = fopen($erro, 'a');
-	$texto = "sdsfsdfsdf";
+	$texto = $data->name;
 	fwrite($file, $texto);
 	fclose($file);
 	 
 	//insert	
 	$sql = "INSERT INTO tprodutos('id','name', 'price', 'quantity') VALUES('".$id."','".$name."','".$price."','".$quantity."')";
-	$result = mysql_query($sql);
+	$result = mysql_query($sql) or die("Erro ao Inseriro no Banco");
 	
 	mysql_close();
 ?>
