@@ -91,6 +91,8 @@
 					quantity:$scope.quantity})					
 					.then(function(data,status,headers,config){
 						console.log("Data Inserted Successfully");
+						//listar
+						$scope.listProducts = response.data.records;
 				});
 				
 				
@@ -99,11 +101,7 @@
                 $scope.name     = '';
                 $scope.price    = '';
                 $scope.quantity = '';
-				
-				//listar
-               $http.get("customers_mysql.php").then(function (response) {
-					$scope.listProducts = response.data.records;
-				});
+               
             };
 
           
