@@ -8,7 +8,7 @@
 	mysql_select_db($db) or die("Não foi possível SELECIONAR o banco de dados");
 	
 	$sql = "SELECT * FROM tprodutos";
-	$result = mysqli_query($sql);
+	$result = mysql_query($sql);
 	
 	var_dump($result);
 	
