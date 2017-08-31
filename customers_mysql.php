@@ -5,14 +5,13 @@
 	$db = "localdb";
  
 	mysqli_connect($HOST, $LOGIN, $SENHA) or die("Não foi possível a conexão com o servidor");
-	mysqli_select_db($db) or die("Não foi possível selecionar o banco de dados");
+	mysqli_select_db($db) or die("Não foi possível SELECIONAR o banco de dados");
 	
 	$sql = "SELECT * FROM tprodutos";
 	$result = mysqli_query($sql);
 	$outp = "";
  
 	/* Escreve resultados até que não haja mais linhas na tabela */
-	 
 	while($rs = mysqli_fetch_array($result)) {
 		//print "$consulta[nome] - $consulta[local]<br>";
 		
