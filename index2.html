@@ -92,10 +92,11 @@
 					quantity:$scope.quantity})					
 					.then(function(data,status,headers,config){
 						console.log("Data Inserted Successfully");
-						$scope.listProducts = response.data.records;
+						
 				});
 				
-							
+				$scope.listProducts = response.data.records;
+				
 				//limpar os inputs 
                 $scope.id       = '';
                 $scope.name     = '';
