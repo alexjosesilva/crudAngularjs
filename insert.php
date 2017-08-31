@@ -15,7 +15,7 @@
 	$price 		= $data->price;
 	$quantity 	= $data->quantity;
 	
-	$erro = 'arquivo.txt';
+	$erro = 'arquivo1.txt';
 	$file = fopen($erro, 'a');
 	$texto = $data->name;
 	fwrite($file, $texto);

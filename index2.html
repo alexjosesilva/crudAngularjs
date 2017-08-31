@@ -85,10 +85,10 @@
 				
 				/*inserir dados no banco*/
 				$http.post("insert.php", {
-				    'id':$scope.id,
-					'name':$scope.name,
-					'price':$scope.price,
-					'quantity':$scope.quantity})					
+				    id:$scope.id,
+					name:$scope.name,
+					price:$scope.price,
+					quantity:$scope.quantity})					
 					.then(function(data,status,headers,config){
 						console.log("Data Inserted Successfully");
 				});
