@@ -12,7 +12,7 @@
 	$id			= mysql_real_escape_string($data->id);
 	
 	//deletar	
-	$sql = "DELETE FROM `tprodutos` WHERE `tprodutos`.`id` =".$id;
+	$sql = "DELETE FROM `tprodutos` WHERE `id` =".$id;
 	$result = mysql_query($sql) or die("Não foi possível apagar o dados no banco");
 	
 	
