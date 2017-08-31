@@ -19,6 +19,5 @@
 	$sql = "INSERT INTO tprodutos('id','name', 'price', 'quantity') VALUES('".$id."','".$name."','".$price."','".$quantity."')";
 	$result = mysql_query($sql);
 	
-	
 	mysql_close();
 ?>
