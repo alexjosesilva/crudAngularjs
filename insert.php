@@ -13,16 +13,18 @@
 	$name 		= $data->name;
 	$price 		= $data->price;
 	$quantity 	= $data->quantity;
-	
-	$erro = 'arquivo1.txt';
-	$file = fopen($erro, 'a');
-	$texto = $data->name;
-	fwrite($file, $texto);
-	fclose($file);
 	 
 	//insert	
 	$sql = "INSERT INTO tprodutos('id','name', 'price', 'quantity') VALUES('".$id."','".$name."','".$price."','".$quantity."')";
 	$result = mysql_query($sql) or die("Erro ao Inseriro no Banco");
 	
+	
+	$erro = 'arquivo2.txt';
+	$file = fopen($erro, 'a');
+	$texto = $data->name;
+	fwrite($file, $texto);
+	fclose($file);
+	
+		
 	mysql_close();
 ?>
