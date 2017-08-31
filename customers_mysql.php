@@ -10,7 +10,7 @@
 	$sql = "SELECT * FROM tprodutos";
 	$result = mysql_query($sql);
 	
-	
+
 	$outp = "";
  
 	/* Escreve resultados até que não haja mais linhas na tabela */

@@ -72,9 +72,10 @@
 				$scope.listProducts = response.data.records;
 			});
 			 		 
-		 
+			//Metodo adicionar
             $scope.add = function(){
-
+				
+				//listar
                 $scope.listProducts.push({
                     id:$scope.id,
                     name:$scope.name,
@@ -82,15 +83,17 @@
                     quantity:$scope.quantity
                 });
 				
+				/*inserir dados no banco*/
 				$http.post("insert.php", {
+				    id:$scope.id,
 					name:$scope.name,
 					price:$scope.price,
 					quantity:$scope.quantity})					
 					.then(function(data,status,headers,config){
 						console.log("Data Inserted Successfully");
-					});
+				});
 			
-				
+				//limpar os inputs
                 $scope.id       = '';
                 $scope.name     = '';
                 $scope.price    = '';
@@ -104,6 +107,8 @@
                 $scope.listProducts[index].price     = $scope.price;
                 $scope.listProducts[index].quantity  = $scope.quantity;
 
+				/*atulizar dados no banco*/
+				
                 $scope.id       = '';
                 $scope.name     = '';
                 $scope.price    = '';
@@ -126,6 +131,8 @@
                 if(resutl === true){
                     var index = getSelectionIndex(id);
                     $scope.listProducts.splice(index,1);
+					
+					/* apagar dados no banco*/
                 }  
             };
 
