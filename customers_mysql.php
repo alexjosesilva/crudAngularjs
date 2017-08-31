@@ -1,9 +1,9 @@
  <?php
-	$HOST  = "127.0.0.1";
+	$HOST  = "127.0.0.1:55609";
 	$LOGIN = "azure";
 	$SENHA = "6#vWHD_$";
  
-	mysqli_connect( $HOST, $LOGIN, $SENHA) or die("Não foi possível a conexão com o servidor");
+	mysqli_connect($HOST, $LOGIN, $SENHA) or die("Não foi possível a conexão com o servidor");
 	mysqli_select_db("localdb") or die("Não foi possível selecionar o banco de dados");
 	
 	$sql = "SELECT * FROM tprodutos";
