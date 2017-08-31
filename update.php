@@ -17,7 +17,7 @@
 	
 	//update	
 	$sql = "UPDATE `tprodutos` SET `name`=".$name.",`price`=".$price.",`quantity` = ".$quantity." WHERE `tprodutos`.`id` = ".$id.";";
-	$result = mysql_query($sql);
+	$result = mysql_query($sql)or die("Erro em Atualizar os Dados no Banco");
 	
 	mysql_close();
 ?>

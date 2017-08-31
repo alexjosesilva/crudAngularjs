@@ -13,7 +13,7 @@
 	
 	//deletar	
 	$sql = "DELETE FROM `tprodutos` WHERE `tprodutos`.`id` =".$id;
-	$result = mysql_query($sql);
+	$result = mysql_query($sql) or die("Não foi possível apagar o dados no banco");
 	
 	
 	mysql_close();
