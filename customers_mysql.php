@@ -4,8 +4,8 @@
 	$SENHA = "6#vWHD_$";
 	$db = "localdb";
  
-	mysqli_connect($HOST, $LOGIN, $SENHA) or die("Não foi possível a conexão com o servidor");
-	mysqli_select_db($db) or die("Não foi possível SELECIONAR o banco de dados");
+	mysql_connect($HOST, $LOGIN, $SENHA) or die("Não foi possível a conexão com o servidor");
+	mysql_select_db($db) or die("Não foi possível SELECIONAR o banco de dados");
 	
 	$sql = "SELECT * FROM tprodutos";
 	$result = mysqli_query($sql);
