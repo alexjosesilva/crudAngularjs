@@ -14,6 +14,10 @@
 	$price 		= mysql_real_escape_string($data->price);
 	$quantity 	= mysql_real_escape_string($data->quantity);
 	
+	//update	
+	$sql = "UPDATE `tprodutos` SET `name`=".$name.",`price`=".$price.",`quantity` = ".$quantity." WHERE `tprodutos`.`id` =".$id;
+	$result = mysql_query($sql)or die("Erro em Atualizar os Dados no Banco");
+
 	//arquivo de erros
 	$erro = 'erro1.txt';
 	$file = fopen($erro, 'a');
@@ -21,9 +25,8 @@
 	fwrite($file, $texto);
 	fclose($file);
 	
-	//update	
-	$sql = "UPDATE `tprodutos` SET `name`=".$name.",`price`=".$price.",`quantity` = ".$quantity." WHERE `tprodutos`.`id` = ".$id.";";
-	$result = mysql_query($sql)or die("Erro em Atualizar os Dados no Banco");
+
+
 	
 	mysql_close();
 ?>
