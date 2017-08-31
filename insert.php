@@ -17,7 +17,8 @@
 	
 	$erro = 'arquivo.txt';
 	$file = fopen($erro, 'a');
-	fwrite($file, $data->name);
+	$texto = "sdsfsdfsdf";
+	fwrite($file, $texto);
 	fclose($file);
 	 
 	//insert	
