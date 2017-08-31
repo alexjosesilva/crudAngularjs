@@ -116,6 +116,21 @@
                 $scope.listProducts[index].quantity  = $scope.quantity;
 
 				/*atulizar dados no banco*/
+				/*inserir dados no banco*/
+				$http.post("update.php", {
+				    id:$scope.id,
+					name:$scope.name,
+					price:$scope.price,
+					quantity:$scope.quantity})					
+					.then(function(data,status,headers,config){
+						console.log("Data Inserted Successfully");
+						
+				});
+				
+				//carregar os dados
+				$http.get("customers_mysql.php").then(function (response) {
+					$scope.listProducts = response.data.records;
+				});
 				
                 $scope.id       = '';
                 $scope.name     = '';
@@ -141,6 +156,21 @@
                     $scope.listProducts.splice(index,1);
 					
 					/* apagar dados no banco*/
+					/*inserir dados no banco*/
+				$http.post("del.php", {
+				    id:$scope.id,
+					name:$scope.name,
+					price:$scope.price,
+					quantity:$scope.quantity})					
+					.then(function(data,status,headers,config){
+						console.log("Data Inserted Successfully");
+						
+				});
+				
+				//carregar os dados
+				$http.get("customers_mysql.php").then(function (response) {
+					$scope.listProducts = response.data.records;
+				});
                 }  
             };
 
