@@ -149,15 +149,11 @@
              $scope.del = function(id){
                 var resutl = confirm("Esta certo disso? ");
                 if(resutl === true){
-                    var index = getSelectionIndex(id);
+                    var index = getSelectionIndex($scope.id);
                     $scope.listProducts.splice(index,1);
 					
 				/* apagar dados no banco*/
-				$http.post("del.php", {
-				    id:$scope.id,
-					name:$scope.name,
-					price:$scope.price,
-					quantity:$scope.quantity})					
+				$http.post("del.php", {id:$scope.id})					
 					.then(function(data,status,headers,config){
 						console.log("Data Inserted Successfully");
 				});
