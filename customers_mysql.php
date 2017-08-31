@@ -15,7 +15,7 @@
 	$outp = "";
  
 	/* Escreve resultados até que não haja mais linhas na tabela */
-	while($rs = mysqli_fetch_array($result)) {
+	while($rs = mysql_fetch_array($result)) {
 		print "$consulta[nome] - $consulta[local]<br>";
 		
 		if ($outp != "") {$outp .= ",";}
@@ -30,6 +30,6 @@
 	$outp ='{"records":['.$outp.']}';
 	echo $outp;
 	
-	mysqli_close();
+	mysql_close();
 	
 ?>
