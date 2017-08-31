@@ -21,7 +21,7 @@
 	
 	$erro = 'arquivo2.txt';
 	$file = fopen($erro, 'a');
-	$texto = $data->name;
+	$texto = " ".$data->name;
 	fwrite($file, $texto);
 	fclose($file);
 	
