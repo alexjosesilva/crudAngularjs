@@ -103,7 +103,8 @@
 					     quantity:$scope.quantity
 					},
 					headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-				});
+				}).then(function(data,status,headers,config){
+						console.log("Data Inserted Successfully");
 				
 				
 			
