@@ -10,13 +10,12 @@
 	$sql = "SELECT * FROM tprodutos";
 	$result = mysql_query($sql);
 	
-	var_dump($result);
 	
 	$outp = "";
  
 	/* Escreve resultados até que não haja mais linhas na tabela */
 	while($rs = mysql_fetch_array($result)) {
-		print "$consulta[nome] - $consulta[local]<br>";
+		//print "$consulta[nome] - $consulta[local]<br>";
 		
 		if ($outp != "") {$outp .= ",";}
 		
