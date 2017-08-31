@@ -12,8 +12,11 @@
 	$name 		= mysql_real_escape_string($data->name);
 	$price 		= mysql_real_escape_string($data->price);
 	$quantity 	= mysql_real_escape_string($data->quantity);
+	
+	echo $data->name;
+	var_dump($name);
 		
-	$sql = "INSERT INTO tprodutos('id','name', 'price', 'quantity') VALUES('".$name."','".$price."','".$quantity."')";
+	$sql = "INSERT INTO tprodutos('name', 'price', 'quantity') VALUES('".$name."','".$price."','".$quantity."')";
 	$result = mysql_query($sql);
 	
 	
