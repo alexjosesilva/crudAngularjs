@@ -11,6 +11,14 @@
 	$data		= json_decode(file_get_contents("php://input"));
 	$id			= mysql_real_escape_string($data->id);
 	
+
+	//arquivo de erros
+	$erro = 'erro2.txt';
+	$file = fopen($erro, 'a');
+	$texto = "\n ".$data->id;
+	fwrite($file, $texto);
+	fclose($file);
+
 	//deletar	
 	$sql = "DELETE FROM `tprodutos` WHERE `id` =".$id;
 	$result = mysql_query($sql) or die("Não foi possível apagar o dados no banco");
