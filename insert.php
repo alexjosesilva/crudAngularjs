@@ -10,10 +10,10 @@
 	
 	$postdata	= json_decode(file_get_contents("php://input"));
 	$data 		= json_decode($postdata);
-	$id 		= mysql_real_escape_string($data->id);
-	$name 		= mysql_real_escape_string($data->name);
-	$price 		= mysql_real_escape_string($data->price);
-	$quantity 	= mysql_real_escape_string($data->quantity);
+	$id 		= $data->id;
+	$name 		= $data->name;
+	$price 		= $data->price;
+	$quantity 	= $data->quantity;
 	
 
 	//insert	
