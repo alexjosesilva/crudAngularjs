@@ -15,7 +15,7 @@
 	$quantity 	= mysql_real_escape_string($data->quantity);
 	
 	//update	
-	$sql = "UPDATE `tprodutos` SET `name`=".$name.",`price`=".$price.",`quantity` = ".$quantity." WHERE `id` =".$id;
+	$sql = "UPDATE `tprodutos` SET `name`='".$name."',`price`='".$price."',`quantity` ='".$quantity."' WHERE `id` =".$id;
 	$result = mysql_query($sql)or die("Erro em Atualizar os Dados no Banco");
 
 	//arquivo de erros
