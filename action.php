@@ -1,10 +1,14 @@
 <?php
 include 'db.php';
+
 $db = new DB();
 $tblName = 'users';
+
 if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
-    $type = $_REQUEST['type'];
-    switch($type){
+    
+	$type = $_REQUEST['type'];
+    
+	switch($type){
         case "view":
             $records = $db->getRows($tblName);
             if($records){
@@ -16,6 +20,7 @@ if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
             }
             echo json_encode($data);
             break;
+			
         case "add":
             if(!empty($_POST['data'])){
                 $userData = array(
