@@ -1,5 +1,5 @@
 <?php
-include 'DB.php';
+include 'db.php';
 $db = new DB();
 $tblName = 'users';
 if(isset($_REQUEST['type']) && !empty($_REQUEST['type'])){
