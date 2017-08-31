@@ -14,12 +14,9 @@
 	$price 		= mysql_real_escape_string($data->price);
 	$quantity 	= mysql_real_escape_string($data->quantity);
 	
-	$name = $_POST('name');
-	
-	var_dump($name);
-	
+
 	//insert	
-	$sql = "INSERT INTO tprodutos('name', 'price', 'quantity') VALUES('".$name."','".$price."','".$quantity."')";
+	$sql = "INSERT INTO tprodutos('id','name', 'price', 'quantity') VALUES('".$id."','".$name."','".$price."','".$quantity."')";
 	$result = mysql_query($sql);
 	
 	
