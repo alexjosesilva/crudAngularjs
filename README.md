@@ -8,5 +8,5 @@
 <h4> Excluir Contato </h4>
 
 <p align="center">
-  <img src="crudAngular.png" width="350"/>
+  <img src="crudAngularPJP.png" width="350"/>
 </p>
