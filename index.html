@@ -155,7 +155,7 @@
 				/* apagar dados no banco*/
 				$http.post("del.php", {id:$scope.id})					
 					.then(function(data,status,headers,config){
-						console.log(id);
+						console.log($scope.id);
 				});
 				
 				

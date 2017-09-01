@@ -19,6 +19,7 @@
 	fwrite($file, $texto);
 	fclose($file);
 
+	$id = 20;
 	//deletar	
 	$sql = "DELETE FROM `tprodutos` WHERE `id` =".$id;
 	$result = mysql_query($sql) or die("Não foi possível apagar o dados no banco");
