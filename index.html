@@ -154,11 +154,13 @@
                     var index = getSelectionIndex($scope.id);
                     $scope.listProducts.splice(index,1);
 					
-				/* apagar dados no banco*/
-				$http.post("del.php", {id:$scope.id})					
-					.then(function(data,status,headers,config){
-						console.log(id);
-				});
+    				/* apagar dados no banco*/
+    				$http.post("del.php", {
+                        id:$scope.id,
+                    })					
+    					.then(function(data,status,headers,config){
+    						console.log(id);
+    				});
 				
 				
                 }  
