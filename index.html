@@ -21,7 +21,7 @@
             <td>{{product.quantity}}</td>
             <td >
                 <a href="#" ng-click="del(product.id)">Delete</a>
-                <a href="#" ng-click="selectEdit(product.id)">Edit</a>
+                <a href="#" ng-click="selectEdit(product.id)">Edite</a>
             </td>
         </tr>
 
@@ -155,9 +155,7 @@
                     $scope.listProducts.splice(index,1);
 					
     				/* apagar dados no banco*/
-    				$http.post("del.php", {
-                        id
-                    })					
+    				$http.post("del.php", {id})					
     					.then(function(data,status,headers,config){
     						console.log(id);
     				});
