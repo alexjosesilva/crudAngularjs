@@ -147,7 +147,9 @@
             };
 
              $scope.del = function(id){
+               
                 var resutl = confirm("Esta certo disso? ");
+               
                 if(resutl === true){
                     var index = getSelectionIndex($scope.id);
                     $scope.listProducts.splice(index,1);
@@ -155,7 +157,7 @@
 				/* apagar dados no banco*/
 				$http.post("del.php", {id:$scope.id})					
 					.then(function(data,status,headers,config){
-						console.log($scope.id);
+						console.log(id);
 				});
 				
 				
