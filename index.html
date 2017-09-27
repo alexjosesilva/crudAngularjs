@@ -7,7 +7,7 @@
 
 <body ng-controller="productController">
 
-<div style="width: 25%; ">
+<div style="width: 25%;height: 25%; ">
 
     <table class="table table-striped" cellpadding="2" cellspacing="2" border="1" >
         <tr> 
@@ -24,11 +24,11 @@
             <td>{{product.quantity}}</td>
             <td >
                 <a href="#" ng-click="del(product.id)"> 
-                    <span class="glyphicons glyphicons-remove">Delete</span>                    
+                    <span class="glyphicon glyphicon-remove">Delete</span>                    
                 </a> 
                 |
                 <a href="#" ng-click="selectEdit(product.id)">
-                    <span class="glyphicons glyphicons-pencil">Edite</span>
+                    <span class="material-icons" style="font-size:48px;color:red">Edite</span>
                 </a>
             </td>
         </tr>
