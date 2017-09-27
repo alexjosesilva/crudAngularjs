@@ -7,6 +7,8 @@
 
 <body ng-controller="productController">
 
+<div style="width: 25%; ">
+
     <table class="table table-striped" cellpadding="2" cellspacing="2" border="1" >
         <tr> 
             <th> Id </th>
@@ -21,13 +23,18 @@
             <td>{{product.price}}</td>
             <td>{{product.quantity}}</td>
             <td >
-                <a href="#" ng-click="del(product.id)">Delete</a>
-                <a href="#" ng-click="selectEdit(product.id)">Edite</a>
+                <a href="#" ng-click="del(product.id)"> 
+                    <span class="glyphicons glyphicons-remove">Delete</span>                    
+                </a> 
+                |
+                <a href="#" ng-click="selectEdit(product.id)">
+                    <span class="glyphicons glyphicons-pencil">Edite</span>
+                </a>
             </td>
         </tr>
 
     </table>
-
+</div>
 
     <h3> Informar Produto </h3>
 
